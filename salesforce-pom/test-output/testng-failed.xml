@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Automation Suite]" guice-stage="DEVELOPMENT" verbose="5">
+  <test thread-count="2" parallel="classes" name="Salesforce_Testcase_Playwright_Firefox(failed)" verbose="5">
+    <parameter name="browserEngine" value="PLAYWRIGHT"/>
+    <parameter name="browserType" value="CHROME"/>
+    <classes>
+      <class name="runner.TestRunner">
+        <methods>
+          <include name="tearDown"/>
+          <include name="preCondition"/>
+          <include name="setUpClass"/>
+          <include name="setup"/>
+          <include name="runScenario" invocation-numbers="1"/>
+          <include name="tearDownClass"/>
+          <include name="postCondition"/>
+        </methods>
+      </class> <!-- runner.TestRunner -->
+    </classes>
+  </test> <!-- Salesforce_Testcase_Playwright_Firefox(failed) -->
+</suite> <!-- Failed suite [Automation Suite] -->

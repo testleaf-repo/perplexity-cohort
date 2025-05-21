@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automation Suite" parallel="tests" thread-count="2">
+    
+    <test name="Salesforce_Testcase_Playwright_Firefox" parallel="classes" thread-count="2">
+        <parameter name="browserEngine" value="PLAYWRIGHT"/>
+        <parameter name="browserType" value="CHROME"/>
+        <classes>
+           <class name="testcases.TC001_CreateLead"/>
+           <class name="testcases.TC002_EditLead"/>
+           <class name="testcases.TC003_DeleteLead"/>
+           <class name="testcases.TC004_CreateOpportunity"/>
+           <class name="testcases.TC005_EditOpportunity"/>
+           <class name="testcases.TC006_DeleteOpportunity"/>
+           <class name="testcases.TC007_CreateServiceTerritory"/>
+           
+        </classes>
+    </test>
+    <test name="Salesforce_Testcase_Selenium_Chrome" parallel="classes" thread-count="2">
+        <parameter name="browserEngine" value="SELENIUM"/>
+        <parameter name="browserType" value="CHROME"/>
+        <classes>
+           <class name="testcases.TC001_CreateLead"/>
+           <class name="testcases.TC002_EditLead"/>
+           <class name="testcases.TC003_DeleteLead"/>
+           <class name="testcases.TC004_CreateOpportunity"/>
+           <class name="testcases.TC005_EditOpportunity"/>
+           <class name="testcases.TC006_DeleteOpportunity"/>
+           <class name="testcases.TC007_CreateServiceTerritory"/>
+
+        </classes>
+    </test> 
+</suite>
+
