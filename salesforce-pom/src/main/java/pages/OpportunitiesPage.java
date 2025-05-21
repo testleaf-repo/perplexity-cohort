@@ -25,7 +25,18 @@ public class OpportunitiesPage extends ProjectHooks{
 	}
 	
 	public OpportunitiesPage chooseStage(String stage) {// stage= "Prospecting"
-		getBrowser().clickJs(LocatorType.XPATH, "//label[text()='Stage']/following::button[1]");
+		try {
+			getBrowser().clickJs(LocatorType.XPATH, "//label[text()='Stage']/following::button[1]"); // for selenium using executeScript method
+		}catch (Exception e) {
+			
+		}
+		
+		try {
+			getBrowser().locateButton(LocatorType.XPATH, "//label[text()='Stage']/following::button[1]").click(); //for playwright 
+		}catch (Exception e) {
+			
+		}
+		
 		getBrowser().locateButton(LocatorType.XPATH, "//lightning-base-combobox-item[@data-value='"+stage+"']").click();
 		return this;
 	}

@@ -4,17 +4,17 @@
     
     <test name="Salesforce_Testcase_Playwright_Firefox" parallel="classes" thread-count="2">
         <parameter name="browserEngine" value="PLAYWRIGHT"/>
-        <parameter name="browserType" value="CHROME"/>
+        <parameter name="browserType" value="FIREFOX"/>
         <classes>
            <class name="runner.TestRunner"/>           
         </classes>
     </test>
-    <!--<test name="Salesforce_Testcase_Selenium_Chrome" parallel="classes" thread-count="2">
+    <test name="Salesforce_Testcase_Selenium_Chrome" parallel="classes" thread-count="2">
         <parameter name="browserEngine" value="SELENIUM"/>
         <parameter name="browserType" value="CHROME"/>
         <classes>
            <class name="runner.TestRunner"/>
         </classes>
-    </test> -->
+    </test> 
 </suite>
 

@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Automation_Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,  1 skipped,  2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -109,12 +109,31 @@
                     </div> <!-- method-list-content failed suite-Automation_Suite -->
                   </li>
                   <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Automation_Suite" class="hide-methods skipped suite-Automation_Suite"> (hide)</a> <!-- hide-methods skipped suite-Automation_Suite -->
+                      <a href="#" panel-name="suite-Automation_Suite" class="show-methods skipped suite-Automation_Suite"> (show)</a> <!-- show-methods skipped suite-Automation_Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Automation_Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Automation_Suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Create a new opportunity with valid details&quot;, &quot;Create Opportunity in Salesforce&quot;)">runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Automation_Suite -->
+                  </li>
+                  <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
                       <a href="#" panel-name="suite-Automation_Suite" class="hide-methods passed suite-Automation_Suite"> (hide)</a> <!-- hide-methods passed suite-Automation_Suite -->
                       <a href="#" panel-name="suite-Automation_Suite" class="show-methods passed suite-Automation_Suite"> (show)</a> <!-- show-methods passed suite-Automation_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Automation_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Automation_Suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Create a new opportunity with valid details&quot;, &quot;Create Opportunity in Salesforce&quot;)">runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Automation_Suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Create a new opportunity with valid details&quot;, &quot;Create Opportunity in Salesforce&quot;)">runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce")</a> <!-- method navigator-link -->
@@ -144,92 +163,75 @@
                   </a> <!-- runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Create a new opportunity with valid details","Create Opportunity in Salesforce")</span>
-                  <div class="stack-trace">com.microsoft.playwright.impl.TargetClosedError: Error {
-  message=&apos;Target page, context or browser has been closed
-  name=&apos;TargetClosedError
-  stack=&apos;TargetClosedError:Target page, context or browser has been closed
-Error
-    at captureRawStack (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\utils\stackTrace.js:49:17)
-    at LongStandingScope._race (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\utils\manualPromise.js:91:52)
-    at LongStandingScope.race (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\utils\manualPromise.js:84:17)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\server\dispatchers\dispatcher.js:96:36)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
-- waiting for locator(&quot;//lightning-formatted-text[@slot=&apos;primaryField&apos;]&quot;).first()
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (3ec776a66511211f4bf36c5a27970ccb)] -&gt; xpath: //lightning-base-combobox-item[@data-value=&apos;Prospecting&apos;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.26.0&apos;, revision: &apos;8ccf0219d7&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59613/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ec776a66511211f4bf36c5a27970ccb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.testleaf.web.element.SeButtonImpl.click(SeButtonImpl.java:15)
+	at pages.OpportunitiesPage.chooseStage(OpportunitiesPage.java:40)
+	at stepDefinition.OpportunitiesSteps.the_user_enters_the_opportunity_details(OpportunitiesSteps.java:30)
+	at ✽.The user enters the opportunity details:(file:///C:/Users/DELL/OneDrive%20-%20TestLeaf%20Software%20Solutions%20Private%20Limited/myCloudFiles/Tech_Architect_Framework/twin-engine-framework/salesforce-pom/src/main/resources/features/salesforce/CreateOpportunity.feature:11)
 
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
-	at com.microsoft.playwright.impl.FrameImpl.textContentImpl(FrameImpl.java:818)
-	at com.microsoft.playwright.impl.FrameImpl.lambda$textContent$38(FrameImpl.java:809)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
-	at com.microsoft.playwright.impl.FrameImpl.textContent(FrameImpl.java:809)
-	at com.microsoft.playwright.impl.LocatorImpl.textContent(LocatorImpl.java:591)
-	at com.microsoft.playwright.Locator.textContent(Locator.java:5189)
-	at com.testleaf.web.element.PwElementImpl.getText(PwElementImpl.java:31)
-	at pages.OpportunitiesPage.verifyOpportunityName(OpportunitiesPage.java:39)
-	at stepDefinition.OpportunitiesSteps.a_new_opportunity_should_be_created_with_opportunity_name(OpportunitiesSteps.java:39)
-	at ✽.A new opportunity should be created with opportunity name &quot;Jane&quot;(file:///C:/Users/DELL/OneDrive%20-%20TestLeaf%20Software%20Solutions%20Private%20Limited/myCloudFiles/Tech_Architect_Framework/twin-engine-framework/salesforce-pom/src/main/resources/features/salesforce/CreateOpportunity.feature:16)
-Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
-  message=&apos;Target page, context or browser has been closed
-  name=&apos;TargetClosedError
-  stack=&apos;TargetClosedError:Target page, context or browser has been closed
-Error
-    at captureRawStack (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\utils\stackTrace.js:49:17)
-    at LongStandingScope._race (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\utils\manualPromise.js:91:52)
-    at LongStandingScope.race (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\utils\manualPromise.js:84:17)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\server\dispatchers\dispatcher.js:96:36)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-15238660114989957104\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
-- waiting for locator(&quot;//lightning-formatted-text[@slot=&apos;primaryField&apos;]&quot;).first()
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
-	at com.microsoft.playwright.impl.FrameImpl.textContentImpl(FrameImpl.java:818)
-	at com.microsoft.playwright.impl.FrameImpl.lambda$textContent$38(FrameImpl.java:809)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
-	at com.microsoft.playwright.impl.FrameImpl.textContent(FrameImpl.java:809)
-	at com.microsoft.playwright.impl.LocatorImpl.textContent(LocatorImpl.java:591)
-	at com.microsoft.playwright.Locator.textContent(Locator.java:5189)
-	at com.testleaf.web.element.PwElementImpl.getText(PwElementImpl.java:31)
-	at pages.OpportunitiesPage.verifyOpportunityName(OpportunitiesPage.java:39)
-	at stepDefinition.OpportunitiesSteps.a_new_opportunity_should_be_created_with_opportunity_name(OpportunitiesSteps.java:39)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Automation_Suite-class-failed -->
+          <div class="suite-Automation_Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">runner.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Create a new opportunity with valid details&quot;, &quot;Create Opportunity in Salesforce&quot;)">
+                  </a> <!-- runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Create a new opportunity with valid details","Create Opportunity in Salesforce")</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button aria-haspopup=&quot;true&quot; type=&quot;button&quot; class=&quot;slds-button branding-userProfile-button slds-button slds-global-actions__avatar slds-global-actions__item-action&quot; data-aura-rendered-by=&quot;97:220;a&quot;&gt;...&lt;/button&gt; is not clickable at point (1884, 23). Other element would receive the click: &lt;div role=&quot;dialog&quot; tabindex=&quot;-1&quot; aria-modal=&quot;true&quot; class=&quot;panel slds-modal slds-fade-in-open&quot; data-aura-rendered-by=&quot;1351:0&quot; style=&quot;opacity: 1;&quot; aria-label=&quot;New Opportunity&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=136.0.7103.114)
+Build info: version: &apos;4.26.0&apos;, revision: &apos;8ccf0219d7&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3ec776a66511211f4bf36c5a27970ccb, clickElement {id=f.E382A56618790D642C0AD6A0B2D469DE.d.10F75D37899B1D100B4A6252BF8693A9.e.183}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59613}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59613/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3ec776a66511211f4bf36c5a27970ccb)] -&gt; xpath: //span[@data-aura-class=&apos;oneUserProfileCardTrigger&apos;]//button]
+Session ID: 3ec776a66511211f4bf36c5a27970ccb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.testleaf.web.element.SeButtonImpl.click(SeButtonImpl.java:16)
+	at pages.LogoutPage.clickViewProfile(LogoutPage.java:9)
+	at pages.BasePage.tearDown(BasePage.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
@@ -249,13 +251,23 @@ Call log:
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Automation_Suite-class-failed -->
+          </div> <!-- suite-Automation_Suite-class-skipped -->
           <div class="suite-Automation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">runner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Create a new opportunity with valid details&quot;, &quot;Create Opportunity in Salesforce&quot;)">
+                  </a> <!-- runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Create a new opportunity with valid details","Create Opportunity in Salesforce")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Create a new opportunity with valid details&quot;, &quot;Create Opportunity in Salesforce&quot;)">
@@ -280,11 +292,18 @@ Call log:
 &lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;5&quot;&gt;
   &lt;test thread-count=&quot;2&quot; parallel=&quot;classes&quot; name=&quot;Salesforce_Testcase_Playwright_Firefox&quot; verbose=&quot;5&quot;&gt;
     &lt;parameter name=&quot;browserEngine&quot; value=&quot;PLAYWRIGHT&quot;/&gt;
-    &lt;parameter name=&quot;browserType&quot; value=&quot;CHROME&quot;/&gt;
+    &lt;parameter name=&quot;browserType&quot; value=&quot;FIREFOX&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;runner.TestRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Salesforce_Testcase_Playwright_Firefox --&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;classes&quot; name=&quot;Salesforce_Testcase_Selenium_Chrome&quot; verbose=&quot;5&quot;&gt;
+    &lt;parameter name=&quot;browserEngine&quot; value=&quot;SELENIUM&quot;/&gt;
+    &lt;parameter name=&quot;browserType&quot; value=&quot;CHROME&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;runner.TestRunner&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Salesforce_Testcase_Selenium_Chrome --&gt;
 &lt;/suite&gt; &lt;!-- Automation Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -297,6 +316,9 @@ Call log:
             <ul>
               <li>
                 <span class="test-name">Salesforce_Testcase_Playwright_Firefox (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Salesforce_Testcase_Selenium_Chrome (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -330,20 +352,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.TestRunner')
-data.setCell(0, 3, 28645);
+data.setCell(0, 3, 32878);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runner.TestRunner')
-data.setCell(1, 3, 20583);
+data.setCell(1, 3, 24702);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'runScenario')
+data.setCell(2, 2, 'runner.TestRunner')
+data.setCell(2, 3, 19990);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runner.TestRunner')
+data.setCell(3, 3, 0);
 window.suiteTableData['Automation_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Automation_Suite">
               </div> <!-- times-div-Automation_Suite -->
             </div> <!-- times-div -->
@@ -371,56 +401,96 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@1f760b47)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@21d03963)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@1f760b47)</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">preCondition(PLAYWRIGHT, CHROME)</span>
-                <span class="method-start">684 ms</span>
+                <span class="method-name">preCondition(PLAYWRIGHT, FIREFOX)</span>
+                <span class="method-start">771 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">preCondition(SELENIUM, CHROME)</span>
+                <span class="method-start">771 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">23360 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce")</span>
-                <span class="method-start">35524 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">56112 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">postCondition</span>
-                <span class="method-start">57795 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">preCondition(PLAYWRIGHT, CHROME)</span>
-                <span class="method-start">58655 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">62455 ms</span>
+                <span class="method-start">15549 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce")</span>
-                <span class="method-start">73995 ms</span>
+                <span class="method-start">27627 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">31324 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce")</span>
+                <span class="method-start">47259 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">102665 ms</span>
+                <span class="method-start">52344 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">preCondition</span>
+                <span class="method-start">53621 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">53625 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce")</span>
+                <span class="method-start">53631 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">postCondition</span>
-                <span class="method-start">102689 ms</span>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">53640 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">102712 ms</span>
+                <span class="method-start">53653 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">80144 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">postCondition</span>
+                <span class="method-start">83937 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">preCondition(PLAYWRIGHT, FIREFOX)</span>
+                <span class="method-start">85611 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">147697 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Create a new opportunity with valid details", "Create Opportunity in Salesforce")</span>
+                <span class="method-start">162138 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">182135 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">postCondition</span>
+                <span class="method-start">185522 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">186991 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
