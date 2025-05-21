@@ -1,0 +1,11 @@
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/constants/BrowserTestEngine.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/constants/BrowserType.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/constants/LocatorType.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/web/api/APIClient.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/web/api/ResponseAPI.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/web/browser/Browser.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/web/browser/BrowserFactory.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/web/element/Button.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/web/element/Edit.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/web/element/Element.java
+/Users/babu/Desktop/ai-projects/bridge-design-pattern/core-interfaces/src/main/java/com/testleaf/web/element/Link.java
