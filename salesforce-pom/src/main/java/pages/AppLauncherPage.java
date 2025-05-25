@@ -17,5 +17,11 @@ public class AppLauncherPage extends ProjectHooks{
 		getBrowser().locateLink(LocatorType.XPATH, "//a[@data-label='Leads']/ancestor::li").click();
 		return new LeadsPage();
 	}
+
+	public AccountsPage searchAndClickAccounts() {
+		getBrowser().locateEdit(LocatorType.XPATH, "//input[@placeholder='Search apps or items...']").appendText("Accounts");
+		getBrowser().locateLink(LocatorType.XPATH, "//a[@data-label='Accounts']/ancestor::li").click();
+		return new AccountsPage();
+	}
 	
 }
