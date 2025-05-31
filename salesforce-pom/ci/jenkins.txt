@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/testleaf-repo/perplexity-cohort.git' // Replace with your repo URL
+            }
+        }
+        
+        stage('Build Core Modules') {
+            steps {
+                dir('core-interfaces') {
+                    bat 'mvn clean install'
+                }
+                dir('selenium-core') {
+                    bat 'mvn clean install'
+                }
+                dir('playwright-core') {
+                    bat 'mvn clean install'
+                }
+                 dir('rest-assured-core') {
+                    bat 'mvn clean install'
+                }
+                dir('core-utilities') {
+                    bat 'mvn clean install'
+                }
+            }
+        }
+
+        stage('Run TestNG Tests') {
+            steps {
+                dir('salesforce-pom') {
+                    bat 'mvn clean test "-DsuiteXmlFile=testng.xml"'
+                }
+            }
+        }
+
+        stage('Archive Reports') {
+            steps {
+                junit '**/target/surefire-reports/*.xml'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline execution complete.'
+        }
+        success {
+            echo 'All tests passed successfully.'
+        }
+        failure {
+            echo 'Some tests failed. Please check reports.'
+        }
+    }
+}
