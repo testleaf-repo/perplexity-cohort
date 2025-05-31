@@ -112,11 +112,10 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M7</version>
 				<configuration>
-					<includes>
-						<include>**/*Test.java</include>
-						<include>**/*Tests.java</include>
-						<include>**/*TestCase.java</include>
-					</includes>
+					<testSourceDirectory>src/main/java</testSourceDirectory>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
 					<testFailureIgnore>false</testFailureIgnore>
 					<useSystemClassLoader>true</useSystemClassLoader>
 					<parallel>methods</parallel>
