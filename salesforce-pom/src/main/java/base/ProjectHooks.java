@@ -30,7 +30,7 @@ public class ProjectHooks extends AbstractTestNGCucumberTests{
     @BeforeMethod
     @Parameters({"browserEngine", "browserType"})
     public void preCondition(@Optional("SELENIUM") String browserEngineParam, @Optional("CHROME") String browserTypeParam) {
-    	System.setProperty("remote", "false"); // set the property to true for run in remote machine
+    	System.setProperty("remote", "true"); // set the property to true for run in remote machine
         BrowserTestEngine browserEngine = BrowserTestEngine.valueOf(browserEngineParam.toUpperCase());
         BrowserType browserType = BrowserType.valueOf(browserTypeParam.toUpperCase());
 

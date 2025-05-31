@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.testleaf</groupId>
   <artifactId>selenium-core</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <properties>
 	  <java.version>17</java.version>
 	  <core.interfaces.version>1.0.4</core.interfaces.version>

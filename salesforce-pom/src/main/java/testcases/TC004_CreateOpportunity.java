@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.AppLauncherPage;
 import pages.BasePage;
 
-public class TC002_CreateOpportunity extends BasePage {
+public class TC004_CreateOpportunity extends BasePage {
 
     @BeforeTest
     public void setData() {
