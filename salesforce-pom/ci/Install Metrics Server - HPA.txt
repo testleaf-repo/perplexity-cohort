@@ -1,0 +1,39 @@
+install Vi editor : sudo apt install vim
+
+# Deploy Horizontal Auto-Scaler:
+
+# Apply the configuration for horizontal pod auto-scaling:
+
+kubectl apply -f hpa-selenium-node-edge.yaml
+
+# Deploy Metrics Server:
+
+#Install the Metrics Server using the provided command:
+
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+#Edit the Metrics Server deployment to add the --kubelet-insecure-tls flag:
+
+kubectl edit deployment metrics-server -n kube-system
+
+#Add the  --kubelet-insecure-tls flag to the args section.
+
+#Please note that using --kubelet-insecure-tls should be done with caution in non-production or development environments.
+
+#You need add the tolerations as well (like in hub, chrome node) below spec.
+
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
+
+#Verify the Metrics Server deployment:
+
+kubectl get deployments,pods,services -n kube-system | grep metrics-server
+
+kubectl top pod
+
+Reference :
+
+https://github.com/kubernetes/examples/tree/master/staging/selenium
+https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
