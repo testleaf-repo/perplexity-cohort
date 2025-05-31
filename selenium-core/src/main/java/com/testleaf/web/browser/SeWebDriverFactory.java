@@ -37,7 +37,7 @@ public class SeWebDriverFactory implements WebDriverFactory {
 //    }
     
     public WebDriver createDriver(BrowserType browserType, Capabilities capabilities) {
-    	boolean useRemote = false;
+    	boolean useRemote;
         switch (browserType) {
             case CHROME:
                 ChromeOptions chromeOptions = new ChromeOptions();
@@ -50,7 +50,7 @@ public class SeWebDriverFactory implements WebDriverFactory {
                     	DesiredCapabilities dc = new DesiredCapabilities();
                     	dc.setBrowserName("chrome");
                     	chromeOptions.merge(dc);
-                        return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), chromeOptions);
+                        return new RemoteWebDriver(new URL("http://20.244.33.62:32000/wd/hub"), chromeOptions);
                     } catch (MalformedURLException e) {
                         throw new RuntimeException("Invalid Selenium Grid URL", e);
                     }
@@ -69,7 +69,7 @@ public class SeWebDriverFactory implements WebDriverFactory {
                     	DesiredCapabilities dc = new DesiredCapabilities();
                     	dc.setBrowserName("chrome");
                     	firefoxOptions.merge(dc);
-                        return new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxOptions);
+                        return new RemoteWebDriver(new URL("http://20.244.33.62:32000/wd/hub"), firefoxOptions);
                     } catch (MalformedURLException e) {
                         throw new RuntimeException("Invalid Selenium Grid URL", e);
                     }

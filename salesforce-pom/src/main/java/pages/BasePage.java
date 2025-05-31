@@ -10,8 +10,8 @@ public class BasePage extends ProjectHooks{
 	@BeforeMethod
 	public void setup() {
 		new LoginPage()
-        .enterUsername("rameshkrishnan.ganesan696@agentforce.com")
-        .enterPassword("testleaf@1234")
+        .enterUsername("gokul.sekar@testleaf.com")
+        .enterPassword("Leaf@1234")
         .clickLogin()
         .clickAppLauncher()
         .clickViewAllButton();
